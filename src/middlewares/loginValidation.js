@@ -17,7 +17,7 @@ const validateUserLogin = async (req, res, next) => {
     return res.status(emailChecked.code).json({ message: emailChecked.message });
   }
 
-  const passwordChecked = await userServices.passwordLoginChecke(email, password);
+  const passwordChecked = await userServices.passwordLoginCheck(email, password);
   if (passwordChecked) {
     return res.status(passwordChecked.code).json({ message: passwordChecked.message });
   }
@@ -26,4 +26,5 @@ const validateUserLogin = async (req, res, next) => {
 
 module.exports = {
   validateUserLogin,
+
 };

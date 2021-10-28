@@ -27,15 +27,8 @@ const emailExist = async (email) => {
   return userEmail;
 };
 
-const loginUser = async (email, password) => {
-  const db = await connection();
-  const userLogin = await db.collection('users').findOne({ email, password });
-  return userLogin;
-};
-
 module.exports = {
   getUsers,
   createUser,
   emailExist,
-  loginUser,
 };

@@ -14,5 +14,6 @@ app.get('/', (request, response) => {
 
 app.use('/users', allRouters.userRouter);
 app.use('/login', allRouters.loginRouter);
+app.use('/recipes', allRouters.recipeRouter);
 
 module.exports = app;

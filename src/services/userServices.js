@@ -29,7 +29,7 @@ const validateEmailLogin = (email) => {
   return null;
 };
 
-const passwordLoginChecke = async (email, senha) => {
+const passwordLoginCheck = async (email, senha) => {
   const { password } = await userModels.emailExist(email);
   if (senha !== password) {
     return { code: 401, message: 'Incorrect username or password' };
@@ -44,20 +44,11 @@ const validatePasswordLogin = (senha) => {
   return null;
 };
 
-const loginUser = async (email, password) => {
-  const userLoged = await userModels.loginUser(email, password);
-  if (!userLoged) {
-    return null;
-  }
-  return userLoged;
-};
-
 module.exports = {
   getUsers,
   createUser,
   emailLoginCheck,
   validateEmailLogin,
-  passwordLoginChecke,
+  passwordLoginCheck,
   validatePasswordLogin,
-  loginUser,
 };
