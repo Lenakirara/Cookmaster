@@ -1,11 +1,13 @@
 const recipesServices = require('../services/recipesServices');
 
+const msgError = 'Sorry! Error in communication with the system';
+
 const getAllRecipes = async (req, res) => {
   try {
     const recipes = await recipesServices.getAllRecipes();
     return res.status(200).json(recipes);
   } catch (error) {
-    return res.status(500).json({ error: 'Ocorreu um erro na requisição' });
+    return res.status(500).json({ message: msgError });
   }
 };
 
@@ -18,7 +20,7 @@ const findRecipeById = async (req, res) => {
     }
     return res.status(200).json(recipe);
   } catch (error) {
-    return res.status(500).json({ error: 'Erro na requisição' });
+    return res.status(500).json({ message: msgError });
   }
 };
 
@@ -32,7 +34,7 @@ const createRecipes = async (req, res) => {
     // console.log(recipe, 'RECIPE CONTROLLER');
     return res.status(201).json({ recipe });
   } catch (error) {
-    return res.status(500).json({ error: 'Erro na requisição' });
+    return res.status(500).json({ message: msgError });
   }
 };
 
@@ -52,7 +54,7 @@ const editRecipe = async (req, res) => {
     // console.log(recipe, 'RECEITAS');
     return res.status(200).json(recipe);
   } catch (error) {
-    return res.status(500).json({ error: 'Erro na requisição' });
+    return res.status(500).json({ message: msgError });
   }
 };
 
@@ -62,7 +64,20 @@ const deleteRecipe = async (req, res) => {
     const deletedRecipe = await recipesServices.deleteRecipe(id);
     return res.status(204).json(deletedRecipe);
   } catch (error) {
-    return res.status(500).json({ error: 'Erro na requisição' });
+    return res.status(500).json({ message: msgError });
+  }
+};
+
+const imageUpdate = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { data } = req.user;
+    // console.log(req.user, 'DATA');
+    const result = await recipesServices.imageUpdate(id, data);
+    // console.log(result, 'RESULT - IMAGE');
+    return res.status(200).json(result);
+  } catch (error) {
+    return res.status(500).json({ message: msgError });
   }
 };
 
@@ -72,4 +87,5 @@ module.exports = {
   createRecipes,
   editRecipe,
   deleteRecipe,
+  imageUpdate,
 };

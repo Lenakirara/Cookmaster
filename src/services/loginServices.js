@@ -9,10 +9,10 @@ const jwtConfig = {
 };
 
 const userLogin = async (userEmail) => {
-  const { _id, email } = await userModels.emailExist(userEmail);
+  const { _id, role } = await userModels.emailExist(userEmail);
   const userWithoutPassword = {
     id: _id,
-    email,
+    role,
   };
 
   const token = JWT.sign({ data: userWithoutPassword }, SECRET, jwtConfig);

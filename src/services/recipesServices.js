@@ -29,10 +29,24 @@ const deleteRecipe = async (id) => {
   return deletedRecipe;
 };
 
+const imageUpdate = async (id, data) => {
+  const userId = data.id;
+  // console.log(userId, 'IMAGE - SERVICES');
+  const { role } = data;
+  // console.log(role, 'ROLE-img-SERVICE');
+  const imageRecipe = await recipesModels.findRecipeById(id);
+  const imgURL = `localhost:3000/src/uploads/${id}.jpeg`;
+  if (imageRecipe.userId === userId || role === 'admin') {
+    const updateImg = await recipesModels.imageUpdate(id, imgURL);
+    return updateImg;
+  }
+};
+
 module.exports = {
   getAllRecipes,
   findRecipeById,
   createRecipes,
   editRecipes,
   deleteRecipe,
+  imageUpdate,
 };
