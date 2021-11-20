@@ -1,57 +1,14 @@
-### Termos e acordos
-
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe
-
 # Boas vindas ao repositório do projeto Cookmaster!
 
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por Slack! #vqv 🚀
+## O que deverá ser desenvolvido
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um Pull Request para colocar seus códigos.
+Você vai desenvolver seu app utilizando a arquitetura MSC!
 
----
-
-# Sumário
-
-- [Boas vindas ao repositório do projeto Cookmaster!](#boas-vindas-ao-repositório-do-projeto-cookmaster)
-- [Habilidades](#habilidades)
-- [Entregáveis](#entregáveis)
-  - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
-  - [Desenvolvimento](#desenvolvimento)
-  - [Data de Entrega](#data-de-entrega)
-- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
-  - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
-  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-- [Como desenvolver](#como-desenvolver)
-  - [Todos os seus endpoints devem estar no padrão REST](#todos-os-seus-endpoints-devem-estar-no-padrão-rest)
-  - [Conexão com o Banco](#conexão-com-o-banco)
-  - [Coleções](#coleções)
-  - [Linter](#linter)
-  - [Testes](#testes)
-    - [Dica: desativando testes](#dica-desativando-testes)
-- [Requisitos do projeto](#requisitos-do-projeto)
-  - [Requisitos Obrigatórios](#requisitos-obrigatórios)
-    - [1 - Crie um endpoint para o cadastro de usuários](#1---crie-um-endpoint-para-o-cadastro-de-usuários)
-    - [2 - Crie um endpoint para o login de usuários](#2---crie-um-endpoint-para-o-login-de-usuários)
-    - [3 - Crie um endpoint para o cadastro de receitas](#3---crie-um-endpoint-para-o-cadastro-de-receitas)
-    - [4 - Crie um endpoint para a listagem de receitas](#4---crie-um-endpoint-para-a-listagem-de-receitas)
-    - [5 - Crie um endpoint para visualizar uma receita específica](#5---crie-um-endpoint-para-visualizar-uma-receita-específica)
-    - [6 - Crie uma query em mongo que insira uma pessoa usuária com permissões de admin](#6---crie-uma-query-em-mongo-que-insira-uma-pessoa-usuária-com-permissões-de-admin)
-    - [7 - Crie um endpoint para a edição de uma receita](#7---crie-um-endpoint-para-a-edição-de-uma-receita)
-    - [8 - Crie um endpoint para a exclusão de uma receita](#8---crie-um-endpoint-para-a-exclusão-de-uma-receita)
-    - [9 - Crie um endpoint para a adição de uma imagem a uma receita](#9---crie-um-endpoint-para-a-adição-de-uma-imagem-a-uma-receita)
-    - [10 - Crie um endpoint para acessar a imagem de uma receita](#10---crie-um-endpoint-para-acessar-a-imagem-de-uma-receita)
-    - [11 - Crie testes de integração que cubram no mínimo 30% dos arquivos em `src`, com um mínimo de 50 linhas cobertas](#11---crie-testes-de-integração-que-cubram-no-mínimo-30-dos-arquivos-em-src-com-um-mínimo-de-50-linhas-cobertas)
-  - [Requisitos Bônus](#requisitos-bônus)
-    - [12 - Crie um endpoint para cadastro de pessoas administradoras](#12---crie-um-endpoint-para-cadastro-de-pessoas-administradoras)
-    - [13 - Crie testes de integração que cubram no mínimo 60% dos arquivos em `src`, com um mínimo de 100 linhas cobertas](#13---crie-testes-de-integração-que-cubram-no-mínimo-60-dos-arquivos-em-src-com-um-mínimo-de-100-linhas-cobertas)
-    - [14 - Crie testes de integração que cubram no mínimo 90% dos arquivos em `src`, com um mínimo de 150 linhas cobertas](#14---crie-testes-de-integração-que-cubram-no-mínimo-90-dos-arquivos-em-src-com-um-mínimo-de-150-linhas-cobertas)
-  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
-- [Revisando um pull request](#revisando-um-pull-request)
-- [Avisos finais](#avisos-finais)
+Neste novo projeto deverá ser possível fazer o cadastro e login de pessoas usuárias, onde apenas essas pessoas poderão acessar, modificar e deletar as receitas que cadastrou.
 
 ---
 
-# Habilidades
+## Habilidades
 
 Neste projeto, você será capaz de:
 
@@ -71,21 +28,6 @@ Neste projeto, você será capaz de:
 
 ---
 
-# Entregáveis
-
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
-
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git) sempre que precisar!
-
----
-
-## O que deverá ser desenvolvido
-
-Você vai desenvolver seu app utilizando a arquitetura MSC!
-
-Neste novo projeto deverá ser possível fazer o cadastro e login de pessoas usuárias, onde apenas essas pessoas poderão acessar, modificar e deletar as receitas que cadastrou.
-
----
 
 ## Desenvolvimento
 
@@ -124,15 +66,6 @@ Deverá ser possível adicionar uma imagem à uma receita, utilizando o upload d
   ```
 
 ---
-
-## Data de Entrega
-
-    - Serão `3` dias de projeto.
-    - Data de entrega para avaliação final do projeto: `15/11/2021 - 14:00h`.
-
----
-
-# Instruções para entregar seu projeto
 
 ## Antes de começar a desenvolver
 
@@ -173,84 +106,11 @@ Deverá ser possível adicionar uma imagem à uma receita, utilizando o upload d
 
 - Usando o exemplo anterior: `git push -u origin joaozinho-sd-0x-cookmaster`
 
-6. Crie um novo `Pull Request` _(PR)_
-
-- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-011-cookmaster/pulls)
-- Clique no botão verde _"New pull request"_
-- Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-- Clique no botão verde _"Create pull request"_
-- Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-- **Não se preocupe em preencher mais nada por enquanto!**
-- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-011-cookmaster/pulls) e confira que o seu _Pull Request_ está criado
-
 ---
 
-## Durante o desenvolvimento
+## Como desenvolver
 
-- Faça `commits` das alterações que você fizer no código regularmente.
-
-- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto.
-
-- Os comandos que você utilizará com mais frequência são:
-  1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-  2. `git add` _(para adicionar arquivos ao stage do Git)_
-  3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
----
-
-# Como desenvolver
-
-**⚠️ Leia-os atentamente e siga à risca o que for pedido. ⚠️**
-
-**👀 Observações importantes:**
-
- - O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação;
- - O projeto deve rodar na porta **3000**;
- - A testagem local depende da API estar rodando (utilize `npm run dev` para facilitar o processo);
-
-##  Todos os seus endpoints devem estar no padrão REST
-
-- Use os verbos HTTP adequados para cada operação.
-
-- Agrupe e padronize suas URL em cada recurso.
-
-- Garanta que seus endpoints sempre retornem uma resposta, havendo sucesso nas operações ou não.
-
-- Retorne os códigos de status corretos (recurso criado, erro de validação, autorização, etc).
-
----
-
-Há dois arquivos em `./src/api/` no repositório: `server.js` e `app.js`, **ambos não devem ser renomeados ou apagados**. 
-
-Em `app.js` o seguinte trecho de código não deve ser removido:
-
-```javascript
-app.get('/', (request, response) => {
-  response.send();
-});
-```
-Isso está configurado para o avaliador funcionar corretamente.
-
-## Conexão com o Banco
-
-**⚠️ IMPORTANTE! ⚠️**
-
-O avaliador não consegue ler as informações que estão no local (localhost).
-Portanto, para realizar a conexão com o banco, utilize os seguintes parâmetros:
-
-```javascript
-require('dotenv').config();
-const MONGO_DB_URL = `mongodb://${process.env.HOST || 'mongodb'}:27017/Cookmaster`;
-const DB_NAME = 'Cookmaster';
-```
-Além disso, **renomeie o arquivo `.env.dev` para `.env`**.
-
-Com essas configurações, enquanto estiver na máquina local, o banco será executado normalmente via localhost (possibilitando os testes via `npm test`).
-Como o arquivo `.env` não será enviado para o GitHub (não se preocupe com isso, pois já está configurado no `.gitignore`), o avaliador não executará o banco via localhost e realizará a avaliação corretamente.
-
-## Coleções
+## Conexão com o Banco - Coleções
 
 O banco terá duas coleções: usuários e receitas.
 
@@ -809,36 +669,3 @@ Nenhum teste pode ser pulado;
 O resultado do percentual total de cobertura deve ser igual ou maior que `90`;
 O resultado do numero total de linhas cobertas deve ser igual ou maior que `150`.
 
----
-
-## Depois de terminar o desenvolvimento (opcional)
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
----
-
-# Revisando um pull request
-
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-#VQV
-
----
-
-# Avisos finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_name=Turma%2011)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
